@@ -36,6 +36,9 @@ class ViewController: UIViewController {
         did this if block on my own to see how to best error handel
          the number increase for the dice app
          this block will kepp the app from crashing if uncommented
+         
+         note that this was done at the start of the app to test the app would change
+         the image for the dice when the push was done.
         */
 //        if leftDiceNumber == 6 {
 //            leftDiceNumber = 0
