@@ -9,12 +9,38 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var diceImageView1: UIImageView!
+    @IBOutlet weak var diceImageView2: UIImageView!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        // we used the Image literal to change the image of the dice when our viewloads
+        // after the equal sign just type image literal and you will see a small thing to click on and you can select
+        // the new image you want to pick 
+        //diceImageView1.image = #imageLiteral(resourceName: "DiceSix")
+        //diceImageView2.image = #imageLiteral(resourceName: "DiceTwo")
     }
 
-
+    @IBAction func rollButtonTapped(_ sender: UIButton) {
+        
+        let diceArray = [ #imageLiteral(resourceName: "DiceOne"), #imageLiteral(resourceName: "DiceTwo"), #imageLiteral(resourceName: "DiceThree"), #imageLiteral(resourceName: "DiceFour"), #imageLiteral(resourceName: "DiceFive"), #imageLiteral(resourceName: "DiceSix") ]
+        
+        diceImageView1.image = diceArray.randomElement()
+        diceImageView2.image = diceArray.randomElement()
+ 
+    
+        /*
+        did this if block on my own to see how to best error handel
+         the number increase for the dice app
+         this block will kepp the app from crashing if uncommented
+        */
+//        if leftDiceNumber == 6 {
+//            leftDiceNumber = 0
+//        }
+    }
+    
 }
 
